@@ -147,7 +147,7 @@ describe Terminal do
     it 'Terminal.quitprogram' do
       expect do
         Terminal.quitprogram
-      end.to output("if want quit enter \"y\" otherwise enter anything\n").to_stdout
+      end.to output("if you want quit enter \"y\" otherwise enter anything\n").to_stdout
     end
   end
   before do
