@@ -137,7 +137,7 @@ describe Terminal do
     it 'Terminal.getvalue' do
       expect do
         Terminal.getvalue
-      end.to output("Enter temperature\n").to_stdout
+      end.to output("Enter temperature value\n").to_stdout
     end
   end
   before do
@@ -147,7 +147,7 @@ describe Terminal do
     it 'Terminal.quitprogram' do
       expect do
         Terminal.quitprogram
-      end.to output("enter \"y\" if want quit\n").to_stdout
+      end.to output("if want quit enter \"y\" otherwise enter anything\n").to_stdout
     end
   end
   before do
