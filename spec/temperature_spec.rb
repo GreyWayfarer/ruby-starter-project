@@ -202,6 +202,7 @@ describe Terminal do
     end
   end
 end
+
 describe Input do
   describe 'initialize' do
     input = Input.new
@@ -209,5 +210,4 @@ describe Input do
       expect(input.value).to eq(0.0)
     end
   end
-end
 end
