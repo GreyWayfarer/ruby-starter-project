@@ -1,7 +1,6 @@
 require_relative './input'
 
 class Correctness < Input
-  # input = Input.new
   def self.temperature(input)
     param = true
     reg_str = '^[c,f,k]$'
