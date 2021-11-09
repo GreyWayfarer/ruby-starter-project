@@ -155,6 +155,61 @@ describe Terminal do
   before do
     $stdin = StringIO.new('Ab')
   end
+  describe Correctness do
+  describe 'temperature' do
+    input = Input.new
+    input.value = '1.0'
+    input.to = 'c'
+    input.from = 'f'
+    it 'Correctness.temperature' do
+      expect(Correctness.temperature(input)).to eq(true)
+    end
+  end
+  describe 'temperature' do
+    input = Input.new
+    input.value = '1a'
+    input.to = 'c'
+    input.from = 'f'
+    it 'Correctness.temperature' do
+      expect(Correctness.temperature(input)).to eq(false)
+    end
+  end
+  describe 'temperature' do
+    input = Input.new
+    input.value = '1'
+    input.to = 'c'
+    input.from = 'c'
+    it 'Correctness.temperature' do
+      expect(Correctness.temperature(input)).to eq(false)
+    end
+  end
+  describe 'temperature' do
+    input = Input.new
+    input.value = '1'
+    input.to = 'c1asfa'
+    input.from = 'c'
+    it 'Correctness.temperature' do
+      expect(Correctness.temperature(input)).to eq(false)
+    end
+  end
+  describe 'temperature' do
+    input = Input.new
+    input.value = '1'
+    input.to = 'c'
+    input.from = 'ff'
+    it 'Correctness.temperature' do
+      expect(Correctness.temperature(input)).to eq(false)
+    end
+  end
+end
+
+describe Input do
+  describe 'initialize' do
+    input = Input.new
+    it 'Correctness.temperature' do
+      expect(input.value).to eq(0.0)
+    end
+  end
 end
 
 describe Correctness do
